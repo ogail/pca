@@ -526,7 +526,7 @@ struct solve_retval<ColPivHouseholderQR<_MatrixType>, Rhs>
     eigen_assert(rhs().rows() == dec().rows());
 
     const Index cols = dec().cols(),
-				nonzero_pivots = dec().nonzeroPivots();
+                nonzero_pivots = dec().nonzeroPivots();
 
     if(nonzero_pivots == 0)
     {
@@ -539,7 +539,7 @@ struct solve_retval<ColPivHouseholderQR<_MatrixType>, Rhs>
     // Note that the matrix Q = H_0^* H_1^*... so its inverse is Q^* = (H_0 H_1 ...)^T
     c.applyOnTheLeft(householderSequence(dec().matrixQR(), dec().hCoeffs())
                      .setLength(dec().nonzeroPivots())
-		     .transpose()
+             .transpose()
       );
 
     dec().matrixR()
