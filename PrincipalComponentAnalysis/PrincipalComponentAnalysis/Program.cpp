@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Eigen/Dense"
+#include "pca.h"
 
 using Eigen::MatrixXd;
 using namespace std;
@@ -7,15 +8,10 @@ using namespace std;
 int main()
 {
 	MatrixXd m(3, 3);
-	double number = 1;
 
-	for (int i = 0; i < m.rows(); i++)
-	{
-		for (int j = 0; j < m.cols(); j++)
-		{
-			m(i, j) = number++;
-		}
-	}
+	m << 1, 2, 3,
+		 4, 5, 6,
+		 7, 8, 9;
 
-	cout << m << endl;
+	cout << PCA::Compute(m) << endl;
 }
