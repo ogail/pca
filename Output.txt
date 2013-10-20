@@ -1,0 +1,9 @@
+The principal component of input matrix
+[ 1 2 3;
+  4 5 6;
+  7 8 9 ]
+  
+is the feature vector
+[ 0.235702
+  0.333333
+  0.122008 ]

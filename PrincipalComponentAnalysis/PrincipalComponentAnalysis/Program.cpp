@@ -7,7 +7,10 @@ using namespace std;
 
 int main()
 {
-    MatrixXd m(3, 3);
+    int rows = 3;
+    int columns = 3;
+
+    MatrixXd m(rows, columns);
 
     m << 1, 2, 3,
          4, 5, 6,
