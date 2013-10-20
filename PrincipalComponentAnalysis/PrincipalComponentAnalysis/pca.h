@@ -14,6 +14,20 @@ class PCA
 {
 public:
 
+    /*
+     * Computes the princcipal component of a given matrix. Computation steps:
+     * Assert that the input matrix is square matrix.
+     * Compute the mean image.
+     * Subtract mean image from the data set to get mean centered data vector
+     * Compute the covariance matrix from the mean centered data matrix
+     * Calculate the eigenvalues and eigenvectors for the covariance matrix
+     * Normalize the eigen vectors
+     * Find out an eigenvector with the largest eigenvalue
+     * 
+     * @input MatrixXd D the data samples matrix.
+     * 
+     * @returns VectorXd The principal component vector
+     */
     static VectorXd Compute(MatrixXd D)
     {
         // The matrix must be square matrix.
